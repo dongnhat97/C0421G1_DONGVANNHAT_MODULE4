@@ -14,7 +14,7 @@
   <body>
   <fieldset>
     <form method="post" action="/search">
-      <input type="text" name="english">
+      <input type="text" name="english" value="${english}">
       <input type="submit" value="Search">
       <c:if test="${result!=null}">
         <h3>
