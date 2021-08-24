@@ -33,10 +33,10 @@
               <p style="color: red;font-size: 50px">${sandwich}</p>
             </c:forEach>
         </c:if>
-        <c:if test="${empty save}">
-            <p>${message}</p>
-        </c:if>
     </form>
+    <c:if test="${empty save}">
+        <p>${message}</p>
+    </c:if>
 </fieldset>
   </body>
 </html>
