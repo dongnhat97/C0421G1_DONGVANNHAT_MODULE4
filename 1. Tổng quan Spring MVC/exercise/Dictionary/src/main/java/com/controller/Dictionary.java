@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class Dictionary {
     @Autowired
-    IDictionaryService iDictionaryService;
+   private IDictionaryService iDictionaryService;
     @GetMapping("/translate")
     public String index() {
         return "index";

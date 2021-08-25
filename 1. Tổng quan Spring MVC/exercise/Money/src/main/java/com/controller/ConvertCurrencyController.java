@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class ConvertCurrencyController {
    @Autowired
-   IConverterService iConverterService;
+  private IConverterService iConverterService;
     @GetMapping("/money")
     public String money() {
         return "index";

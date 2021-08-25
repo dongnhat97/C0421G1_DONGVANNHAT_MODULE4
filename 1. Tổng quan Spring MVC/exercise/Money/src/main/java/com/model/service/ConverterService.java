@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ConverterService implements IConverterService {
     @Autowired
-    IConvertRepository iConvertRepository;
+    private IConvertRepository iConvertRepository;
     @Override
     public double convert(double amount, double rate) {
         return iConvertRepository.convert(amount,rate);
