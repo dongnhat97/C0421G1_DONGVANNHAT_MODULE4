@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <head th:replace="/layout :: head"></head>
+</head>
+<body>
+<h3>Edit Customer</h3>
+<div><a th:href="@{/product/}">Back to List</a></div>
+<div id="form">
+<form form action="product/edit" th:object="${product}" method="post">
+
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>
+                <input type="text" th:field="*{id}">
+            </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" th:field="*{name}">
+            </td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>
+                <input type="text" th:field="*{price}">
+            </td>
+        </tr>
+        <tr>
+            <td>status</td>
+            <td>
+                <input type="text" th:field="*{status}">
+            </td>
+        </tr>
+        <tr>
+            <td>producer</td>
+            <td>
+                <input type="text" th:field="*{producer}">
+            </td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Edit"/>
+</form>
+    <footer th:replace="/layout :: footer"></footer>
+</div>
+</body>
+</html>
