@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div th:text="${message}"></div>-->
+<div><a th:href="@{/product/showSave}">Create</a></div>
+<form action="/product/search" method="post">
+    <div style="float: right">
+        <input style="width: 100px" type="submit"/>
+    </div>
+    <div style="float: right">
+        <input style="display: inline" type="text" placeholder="Nhap ten san pham" name="name"/>
+    </div>
+</form>
+<table border="1">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Status</td>
+        <td>Producer</td>
+         <td>Update</td>
+         <td>Delete</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product :${listProduct}">
+        <td th:text="${product.id}"></td>
+        <td>
+            <a th:href="@{/product/showID/__${product.id}__}">
+                <p th:text="${product.name}"></p>
+            </a>
+        </td>
+        <td th:text="${product.price}"></td>
+        <td th:text="${product.status}"></td>
+        <td th:text="${product.producer}"></td>
+        <td>
+            <a th:href="@{/product/showEdit/__${product.id}__}">Update</a>
+        </td>
+        <td>
+            <a th:href="@{/product/showDelete/__${product.id}__}">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
