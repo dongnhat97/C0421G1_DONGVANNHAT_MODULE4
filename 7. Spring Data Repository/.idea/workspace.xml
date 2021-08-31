@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b0730a00-fa60-4358-8636-aa31dd04ae14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../6. JP/practice/src/main/java/com/example/demo/ControllerBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JP/practice/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JP/practice/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/exercise/exercise1/src/main/java/com/controller/controller/BlockController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/exercise/exercise1/src/main/java/com/controller/model/bean/Block.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/exercise/exercise1/src/main/java/com/controller/model/repository/BlockRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/exercise/exercise1/src/main/java/com/controller/model/service/BlockService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/exercise/exercise1/src/main/java/com/controller/model/service/IBlockService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/exercise/exercise1/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/exercise/exercise1/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/exercise/exercise1/src/main/resources/templates/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/exercise/exercise1/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/exercise/exercise1/src/main/resources/templates/page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/exercise/exercise1/src/main/resources/templates/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/exercise/exercise1/src/main/resources/templates/views.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/practice/customer_SP_/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/practice/customer_SP_/src/main/java/com/codegym/model/bean/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/practice/customer_SP_/src/main/java/com/codegym/model/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/practice/customer_SP_/src/main/java/com/codegym/model/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/practice/customer_SP_/src/main/java/com/codegym/model/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/practice/customer_SP_/src/main/java/com/codegym/model/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/practice/customer_SP_/src/main/java/com/codegym/model/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/practice/customer_SP_/src/main/resources/hibernate.conf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/practice/customer_SP_/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/practice/customer_SP_/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/practice/customer_SP_/src/main/webapp/WEB-INF/views/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../6. JPA/practice/customer_SP_/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. Tổng quan Spring MVC/practice/practice2/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../1. Tổng quan Spring MVC/practice/practice2/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5. Thao tác với CSDL và ORM/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../5. Thao tác với CSDL và ORM/customer-management" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1xUEHbLxhdpnErDPDrOiLYAG6a4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/exercise/exercise1" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0730a00-fa60-4358-8636-aa31dd04ae14" name="Default Changelist" comment="" />
+      <created>1630401179966</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630401179966</updated>
+      <workItem from="1630401181435" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1630401190063">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1630401190063" />
+  </component>
+</project>

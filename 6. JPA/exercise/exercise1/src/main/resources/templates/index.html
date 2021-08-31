@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 style="color: red" th:text="${message}"></h3>
+<button><a th:href="@{/block/showCreate}">Create</a></button>
+<table border="1">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Summary</td>
+        <td>Content</td>
+        <td>Update</td>
+        <td>Delete</td>
+    </tr>
+    </thead>
+   <tbody>
+   <tr th:each="block: ${listBlock}">
+       <td th:text="${block.id}"></td>
+
+       <td>
+           <a th:href="@{/block/view/__${block.id}__}">
+               <p th:text="${block.blockName}"></p>
+           </a>
+       </td>
+       <td th:text="${block.blockSummary}"></td>
+       <td th:text="${block.blockContent}"></td>
+       <td>
+           <a th:href="@{/block/showUpdate/__${block.id}__}">
+               <P>Update</P>
+           </a>
+       </td>
+       <td>
+           <a th:href="@{/block/showDelete/__${block.id}__}">
+               <P>Delete</P>
+           </a>
+       </td>
+   </tr>
+   </tbody>
+</table>
+</body>
+</html>
