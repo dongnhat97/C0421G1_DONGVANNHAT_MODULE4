@@ -7,6 +7,10 @@
 <body>
 <h3 style="color: red" th:text="${message}"></h3>
 <button><a th:href="@{/block/showCreate}">Create</a></button>
+<form method="get" action="block/search">
+    <button style="float: right" type="submit">Search</button>
+    <input style="float: right" type="text" width="200px" name="name" placeholder="Nhập tên cần tìm">
+</form>
 <table border="1">
     <thead>
     <tr>

@@ -10,7 +10,8 @@ public class Category {
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy = "category" )
+    @OneToMany(mappedBy = "category",cascade = CascadeType.ALL)
+
     private List<Block> blocks;
 
     public Category() {

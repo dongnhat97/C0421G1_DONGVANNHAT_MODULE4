@@ -13,6 +13,6 @@ public interface IBlockService {
     void save(Block block);
     Block findById(Long id);
     void delete(Long id);
-
+    Page<Block> findByBlockName (Pageable page,String name);
 
 }

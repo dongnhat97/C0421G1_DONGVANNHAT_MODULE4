@@ -37,4 +37,10 @@ public class BlockService implements IBlockService {
     public void delete(Long id) {
        blockRepository.deleteById(id);
     }
+
+    @Override
+    public Page<Block> findByBlockName(Pageable page,String name) {
+        return blockRepository.findByBlockName(page,name);
+    }
+
 }

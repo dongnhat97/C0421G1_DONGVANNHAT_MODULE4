@@ -35,19 +35,22 @@ public class BlockController {
     public String save(@ModelAttribute Block block , RedirectAttributes redirectAttributes) {
             iBlockService.save(block);
             redirectAttributes.addFlashAttribute("message","them moi thanh cong");
-            return "redirect:/block/list";
+            return "redirect:/block";
     }
 
     @GetMapping("/showUpdate/{id}")
-    public ModelAndView showUpdate(@PathVariable long id) {
-        return  new ModelAndView("update","block",iBlockService.findById(id));
+    public ModelAndView showUpdate(@PathVariable long id, ModelAndView modelAndView) {
+        modelAndView.addObject("listCategory",iCategoryService.finAll());
+        modelAndView.addObject("block",iBlockService.findById(id));
+        modelAndView.setViewName("update");
+        return modelAndView;
     }
 
     @PostMapping("/update")
     public String update(@ModelAttribute Block block,RedirectAttributes redirectAttributes) {
         iBlockService.save(block);
         redirectAttributes.addFlashAttribute("message","cap nhat moi thanh cong");
-        return "redirect:/block/list";
+        return "redirect:/block/";
     }
 
     @GetMapping("/showDelete/{id}")
@@ -59,13 +62,18 @@ public class BlockController {
     public String delete(@ModelAttribute Block block,RedirectAttributes redirectAttributes) {
         iBlockService.delete(block.getId());
         redirectAttributes.addFlashAttribute("message","xoa moi thanh cong");
-        return "redirect:/block/list";
+        return "redirect:/block";
     }
 
     @GetMapping("/view/{id}")
     public ModelAndView  view (@PathVariable long id) {
         return new ModelAndView("views","block",iBlockService.findById(id));
     }
-
+    @GetMapping("/search")
+    public ModelAndView search(@PageableDefault(value = 3)Pageable pageable,@RequestParam String name,ModelAndView modelAndView) {
+          modelAndView.addObject("blogPage",iBlockService.findByBlockName(pageable,name));
+          modelAndView.setViewName("search");
+          return modelAndView;
+    }
     
 }
