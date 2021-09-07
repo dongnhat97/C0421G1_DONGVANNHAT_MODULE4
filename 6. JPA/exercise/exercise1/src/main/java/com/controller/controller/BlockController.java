@@ -1,10 +1,8 @@
 package com.controller.controller;
 
-import com.controller.model.bean.Block;
+import com.controller.model.bean.Blog;
 import com.controller.model.service.IBlockService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -22,11 +20,11 @@ public class BlockController {
 
     @GetMapping("/showCreate")
     public ModelAndView showCreate() {
-        return new ModelAndView("create","block",new Block());
+        return new ModelAndView("create","block",new Blog());
     }
 
     @PostMapping("/save")
-    public String save(@ModelAttribute Block block , RedirectAttributes redirectAttributes) {
+    public String save(@ModelAttribute Blog block , RedirectAttributes redirectAttributes) {
             iBlockService.save(block);
             redirectAttributes.addFlashAttribute("message","them moi thanh cong");
             return "redirect:/block/list";
@@ -38,7 +36,7 @@ public class BlockController {
     }
 
     @PostMapping("/update")
-    public String update(@ModelAttribute Block block,RedirectAttributes redirectAttributes) {
+    public String update(@ModelAttribute Blog block, RedirectAttributes redirectAttributes) {
         iBlockService.save(block);
         redirectAttributes.addFlashAttribute("message","cap nhat moi thanh cong");
         return "redirect:/block/list";
@@ -50,7 +48,7 @@ public class BlockController {
     }
 
     @PostMapping("/delete")
-    public String delete(@ModelAttribute Block block,RedirectAttributes redirectAttributes) {
+    public String delete(@ModelAttribute Blog block, RedirectAttributes redirectAttributes) {
         iBlockService.delete(block.getId());
         redirectAttributes.addFlashAttribute("message","xoa moi thanh cong");
         return "redirect:/block/list";

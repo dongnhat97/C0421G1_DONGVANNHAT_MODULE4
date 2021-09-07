@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Block {
+public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -14,10 +14,10 @@ public class Block {
     private String blockSummary;
     private String blockContent;
 
-    public Block() {
+    public Blog() {
     }
 
-    public Block(Long id, String blockName, String blockSummary, String blockContent) {
+    public Blog(Long id, String blockName, String blockSummary, String blockContent) {
         this.id = id;
         this.blockName = blockName;
         this.blockSummary = blockSummary;

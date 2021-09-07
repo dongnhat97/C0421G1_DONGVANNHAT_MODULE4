@@ -5,6 +5,7 @@ import com.controller.model.service.IBlockService;
 import com.controller.model.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -13,13 +14,13 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("/block")
-public class BlockController {
+public class BlogController {
     @Autowired
    private IBlockService iBlockService;
     @Autowired
     private ICategoryService iCategoryService;
     @GetMapping("")
-    public ModelAndView page(@PageableDefault(value = 3)Pageable pageable) {
+    public ModelAndView page(@PageableDefault(value = 1,sort = "startTime",direction = Sort.Direction.ASC)Pageable pageable) {
         return new ModelAndView("index","blogPage",iBlockService.finAll(pageable));
     }
 
@@ -47,7 +48,7 @@ public class BlockController {
     }
 
     @PostMapping("/update")
-    public String update(@ModelAttribute Block block,RedirectAttributes redirectAttributes) {
+    public String update(@ModelAttribute Block block, RedirectAttributes redirectAttributes) {
         iBlockService.save(block);
         redirectAttributes.addFlashAttribute("message","cap nhat moi thanh cong");
         return "redirect:/block/";
@@ -59,7 +60,7 @@ public class BlockController {
     }
 
     @PostMapping("/delete")
-    public String delete(@ModelAttribute Block block,RedirectAttributes redirectAttributes) {
+    public String delete(@ModelAttribute Block block, RedirectAttributes redirectAttributes) {
         iBlockService.delete(block.getId());
         redirectAttributes.addFlashAttribute("message","xoa moi thanh cong");
         return "redirect:/block";

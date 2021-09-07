@@ -1,6 +1,6 @@
 package com.controller.model.service;
 
-import com.controller.model.bean.Block;
+import com.controller.model.bean.Blog;
 import com.controller.model.repository.BlockRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -13,23 +13,23 @@ public class BlockService implements IBlockService {
     @Autowired
     private BlockRepository blockRepository;
     @Override
-    public List<Block> finAll() {
+    public List<Blog> finAll() {
         return blockRepository.findAll();
     }
 
     @Override
-    public Page<Block> finAll(Pageable pageable) {
+    public Page<Blog> finAll(Pageable pageable) {
         return blockRepository.findAll(pageable);
     }
 
 
     @Override
-    public void save(Block block) {
+    public void save(Blog block) {
          blockRepository.save(block);
     }
 
     @Override
-    public Block findById(Long id) {
+    public Blog findById(Long id) {
         return blockRepository.findById(id).get();
     }
 

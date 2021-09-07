@@ -1,7 +1,6 @@
 package com.controller.model.service;
 
 import com.controller.model.bean.Block;
-import com.controller.model.bean.Category;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -13,6 +12,6 @@ public interface IBlockService {
     void save(Block block);
     Block findById(Long id);
     void delete(Long id);
-    Page<Block> findByBlockName (Pageable page,String name);
+    Page<Block> findByBlockName (Pageable page, String name);
 
 }

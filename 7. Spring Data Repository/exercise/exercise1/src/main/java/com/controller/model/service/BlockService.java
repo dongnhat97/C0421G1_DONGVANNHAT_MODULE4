@@ -39,7 +39,7 @@ public class BlockService implements IBlockService {
     }
 
     @Override
-    public Page<Block> findByBlockName(Pageable page,String name) {
+    public Page<Block> findByBlockName(Pageable page, String name) {
         return blockRepository.findByBlockName(page,name);
     }
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Quantity</td>
+        <td>Rent</td>
+        <td>Pay</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item: ${listBook}">
+        <td th:text="${item.id}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.count}"></td>
+        <td>
+            <a th:href="@{/showRent/__${item.id}__}">Rent</a>
+        </td>
+        <td>
+            <a th:href="@{/showPay/__${item.id}__}">Pay</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

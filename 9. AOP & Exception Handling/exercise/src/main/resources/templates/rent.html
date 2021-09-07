@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset>
+    <form method="post" th:action="@{/rent}" th:object="${book}">
+        <input type="hidden" th:field="${book.id}">
+        <input type="hidden" th:field="${book.count}">
+       <h3>Mã mượn sách</h3>
+       <h3 >
+           <input type="text" name="code" th:value="${code}">
+       </h3>
+
+        <h3><input type="submit" value="Rent"> </h3>
+    </form>
+</fieldset>
+</body>
+</html>
