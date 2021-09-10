@@ -65,7 +65,7 @@ public class ProductController {
     }
 
     @GetMapping("/detail/{id}")
-    public ModelAndView showDetail(@PathVariable ("id") long id, HttpServletResponse response) {
+    public ModelAndView showDetail(@PathVariable("id") long id, HttpServletResponse response) {
         Cookie cookie = new Cookie("idProduct", id + "");
         cookie.setMaxAge(60);
         cookie.setPath("/");
@@ -75,14 +75,17 @@ public class ProductController {
     }
 
     @GetMapping("/remove/{id}")
-    public String removeProduct(@ModelAttribute("cart") CartDto cart,@PathVariable("id") Long id){
-        Product product = this.iProductService.findById(id).get();
+    public String removeProduct(@ModelAttribute("cart") CartDto cart, @PathVariable("id") Long id) {
 
-        ProductDto productDto = new ProductDto();
-        BeanUtils.copyProperties(product, productDto);
-        cart.remove(productDto);
+        Optional<Product> product = this.iProductService.findById(id);
+        if (product.isPresent()) {
+            ProductDto productDto = new ProductDto();
 
-        return "redirect:/cart";
+            BeanUtils.copyProperties(product, productDto);
+            cart.remove(productDto);
+        }
+            return "redirect:/cart";
+
+
     }
-
 }

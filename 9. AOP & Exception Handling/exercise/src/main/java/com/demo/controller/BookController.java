@@ -1,5 +1,7 @@
 package com.demo.controller;
 
+import com.demo.exception.OutOfNumberException;
+import com.demo.exception.WrongCodeException;
 import com.demo.model.bean.Book;
 import com.demo.model.bean.Code;
 import com.demo.model.service.IBookService;
@@ -39,7 +41,7 @@ public String showCode(@PathVariable("id") int id, Model model) {
 }
 
     @PostMapping("/rent")
-    public String bookRenting(@ModelAttribute("book") Book book, @RequestParam("code") int code, RedirectAttributes attributes) {
+    public String bookRenting(@ModelAttribute("book") Book book, @RequestParam("code") int code, RedirectAttributes attributes) throws OutOfNumberException {
         Code codeRent = new Code();
 
         if (book.getCount() > 0) {
@@ -52,7 +54,7 @@ public String showCode(@PathVariable("id") int id, Model model) {
             this.iCodeService.save(codeRent);
             attributes.addFlashAttribute("message", "Success. Your code is: " + codeRent.getCode());
         } else {
-            attributes.addFlashAttribute("message", "Fail. No book " + book.getName() + " remaining.");
+           throw new OutOfNumberException();
         }
         return "redirect:/list";
     }
@@ -80,5 +82,14 @@ public String showCode(@PathVariable("id") int id, Model model) {
             iCodeService.delete(code1.getCodeId());
         }
         return "redirect:/list";
+    }
+    @ExceptionHandler(WrongCodeException.class)
+    public ModelAndView wrongCodeScreen() {
+        return new ModelAndView("wrong-code");
+    }
+
+    @ExceptionHandler(OutOfNumberException.class)
+    public ModelAndView outOfNumbScreen() {
+        return new ModelAndView("out-of-number");
     }
 }
