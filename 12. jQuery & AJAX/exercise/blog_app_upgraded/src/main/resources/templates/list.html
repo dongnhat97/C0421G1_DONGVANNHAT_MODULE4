@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+
     <title>Title</title>
 
+    <meta http-equiv="Content-Type" content="width=device-width; charset=UTF-8; shrink-to-fit=no; initial-scale=1" name="viewport">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-<div class="container-fluid">
+
     <div>
        <button style="float: right">search</button>
         <input style="float: right" type="text" id="inputSearch">
 
     </div>
-    <table class="table-bordered ">
-        <thead>
+    <table class="table ">
+        <thead class="table-light">
         <tr>ID</tr>
         <tr>Title</tr>
         <tr>Content</tr>
@@ -24,52 +25,50 @@
         <tr>Category</tr>
         </thead>
         <tbody>
-
         </tbody>
     </table>
-</div>
+
 
 <script>
     $(document).ready(function () {
-        // $.ajax({
-        //     url: "http://localhost:8080/blog/api",
-        //     type: "GET",
-        //     dataType: "json",
-        //     success: function (data) {
-        //        let tr =[];
-        //        for (let i=0;data.length;i++) {
-        //            tr.push('<tr>')
-        //            tr.push('<td>'+data[i].blogId +'</td>')
-        //            tr.push('<td>'+data[i].blogTitle +'</td>')
-        //            tr.push('<td>'+data[i].blogContent +'</td>')
-        //            tr.push('<td>'+data[i].blogAuthor +'</td>')
-        //            tr.push('<td>'+data[i].createdDate +'</td>')
-        //            tr.push('<td>'+data[i].categogy +'</td>')
-        //            tr.push('</tr>')
-        //        }
-        //        $('table').append($(tr.join('')))
-        //     }
-        //     }
-        // )
         $.ajax({
             url: "http://localhost:8080/blog/api",
-            type: "GET",
-            dataType: 'json',
+            type : "GET",
+            dataType: "json",
             success: function (data) {
                 let tr = [];
-                for (let i = 0; i < data.length; i++) {
+                for (let i = 0; i < 3; i++) {
                     tr.push('<tr>');
                     tr.push('<td>' + data[i].blogId + '</td>');
                     tr.push('<td>' + data[i].blogTitle + '</td>');
                     tr.push('<td>' + data[i].blogContent + '</td>');
                     tr.push('<td>' + data[i].blogAuthor + '</td>');
                     tr.push('<td>' + data[i].createdDate + '</td>');
-                    tr.push('<td>' + data[i].category.categogyName + '</td>');
+                    tr.push('<td>' + data[i].categogy.categogyName + '</td>');
                     tr.push('</tr>');
                 }
                 $('.table').append($(tr.join('')));
             }
         })
+        // $.ajax({
+        //     url: "http://localhost:8080/blog/api",
+        //     type: "GET",
+        //     dataType: 'json',
+        //     success: function (data) {
+        //         let tr = [];
+        //         for (let i = 0; i < data.length; i++) {
+        //             tr.push('<tr>');
+        //             tr.push('<td>' + data[i].blogId + '</td>');
+        //             tr.push('<td>' + data[i].blogTitle + '</td>');
+        //             tr.push('<td>' + data[i].blogContent + '</td>');
+        //             tr.push('<td>' + data[i].blogAuthor + '</td>');
+        //             tr.push('<td>' + data[i].createdDate + '</td>');
+        //             tr.push('<td>' + data[i].category.categogyName + '</td>');
+        //             tr.push('</tr>');
+        //         }
+        //         $('.table').append($(tr.join('')));
+        //     }
+        // })
     })
 </script>
 </body>
