@@ -15,6 +15,7 @@
 <h1>Blog List</h1>
 <div class="input-group input-group-lg" style="width: 30%; margin: 0 auto">
     <input type="text" class="form-control" placeholder="Search by categogy" id="searchInput">
+    <button id="search">search</button>
 </div>
 <br>
 <table class="table">
@@ -85,8 +86,8 @@
         })
 
         // Tim kiem theo title
-        $("#searchInput").keyup(function () {
-            let value = $(this).val();
+        $("#search").click(function () {
+            let value = $("#searchInput").val();
             $(".table").empty();
 
             $.ajax({
