@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 style="color: red" th:text="${message}"></h3>
+<button><a th:href="@{/category/showCreate}">Create</a></button>
+<form method="get" action="block/search">
+    <button style="float: right" type="submit">Search</button>
+    <input style="float: right" type="text" width="200px" name="name" placeholder="Nhập tên cần tìm">
+</form>
+<table border="1">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Update</td>
+        <td>Delete</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="category: ${pageCategory}">
+        <td th:text="${category.id}"></td>
+
+        <td>
+            <a th:href="@{/block/view/__${category.id}__}">
+                <p th:text="${category.name}"></p>
+            </a>
+        </td>
+
+        <td>
+            <a th:href="@{/category/showUpdate/__${category.id}__}">
+                <P>Update</P>
+            </a>
+        </td>
+        <td>
+            <a th:href="@{/category/showDelete/__${category.id}__}">
+                <P>Delete</P>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <a th:if="${pageCategory.hasPrevious()}" th:href="@{'/category'(page=${pageCategory.number -1})}">Back</a>
+    <span th:text="${pageCategory.number +1}">/</span>/<span th:text="${pageCategory.totalPages}"></span>
+    <a th:if="${pageCategory.hasNext()}" th:href="@{'/category'(page=${pageCategory.number +1})}">Next</a>
+</div>
+</body>
+</html>

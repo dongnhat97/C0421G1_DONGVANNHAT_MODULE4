@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 style="color: red" th:text="${message}"></h3>
+<div sec:authorize="isAuthenticated()">
+
+    <a sec:authorize="hasRole('ADM')" th:href="@{/block/showCreate}">create</a>
+</div>
+
+<form method="get" action="block/search">
+    <button style="float: right" type="submit">Search</button>
+    <input style="float: right" type="text" width="200px" name="name" placeholder="Nhập tên cần tìm">
+</form>
+<table border="1">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Summary</td>
+        <td>Content</td>
+        <td>Date time</td>
+        <td>Name Category</td>
+        <td>Update</td>
+        <td>Delete</td>
+    </tr>
+    </thead>
+   <tbody>
+   <tr th:each="block: ${blogPage}">
+       <td th:text="${block.id}"></td>
+
+       <td>
+           <a th:href="@{/block/view/__${block.id}__}">
+               <p th:text="${block.blockName}"></p>
+           </a>
+       </td>
+       <td th:text="${block.blockSummary}"></td>
+       <td th:text="${block.blockContent}"></td>
+       <td th:text="${block.startTime}"></td>
+       <td th:text="${block.category.name}"></td>
+       <td>
+           <a th:href="@{/block/showUpdate/__${block.id}__}">
+               <P>Update</P>
+           </a>
+       </td>
+       <td>
+           <a th:href="@{/block/showDelete/__${block.id}__}">
+               <P>Delete</P>
+           </a>
+       </td>
+   </tr>
+   </tbody>
+</table>
+<div>
+    <a th:if="${blogPage.hasPrevious()}" th:href="@{'/block/list'(page=${blogPage.number -1})}">Back</a>
+    <span th:text="${blogPage.number +1}">/</span>/<span th:text="${blogPage.totalPages}"></span>
+    <a th:if="${blogPage.hasNext()}" th:href="@{'/block/list'(page=${blogPage.number +1})}">Next</a>
+</div>
+</body>
+</html>
