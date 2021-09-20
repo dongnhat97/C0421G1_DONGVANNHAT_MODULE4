@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: sticky">
+    <div class="container-fluid">
+        <img src="/FURAMA.png" style="width: 5%"></a>
+        <h4>Đồng Văn Nhật</h4>
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark "
+     style="position: sticky;top: 0px;z-index: 2">
+<!--    khi cùng vị trí thì sẽ ưu tiên index nào lớn hơn-->
+    <div class="container-fluid">
+
+
+        <li class="nav-item">
+            <a class="navbar-brand" href="#" style="padding-left: 500px">Home</a>
+        </li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="/customer/list">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="/service/list">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="/employee/list">Employee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="/contract/list">Contract</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2" style="background-color: gray; height: 1100px;padding-left: 30px">
+            <div class="row">
+                <h1>Item One</h1>
+            </div>
+            <div class="row">
+                <h1>Item Two</h1>
+            </div>
+            <div class="row"><h1>Item Three</h1></div>
+        </div>
+        <div class="col-10">
+            <div class="row">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://scr.vn/wp-content/uploads/2020/07/%E1%BA%A2nh-ch%E1%BA%A5t-l%C6%B0%E1%BB%A3ng-cao-khe-n%C3%BAi-c%E1%BB%B1c-%C4%91%E1%BA%B9p-scaled-1536x864.jpg"
+                                 class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://anhdep123.com/109-hinh-anh-phong-canh-ve-thien-nhien-dep-hung-vi/hinh-anh-phong-canh-dep/"
+                                 class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://anhdep123.com/109-hinh-anh-phong-canh-ve-thien-nhien-dep-hung-vi/anh-phong-canh/"
+                                 class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <p style="margin-top: 50px;font-family: 'Times New Roman'">Khu nghỉ dưỡng Furama, tọa lạc trên bãi biển
+                    Đà Nẵng, được coi là khu nghỉ dưỡng có uy tín nhất của Việt Nam, đã vinh dự đón tiếp những vị khách
+                    nổi tiếng của hoàng gia cũng như những chính trị gia. Khu nghỉ dưỡng là cửa ngỏ đi đến 3 Di sản thế
+                    giới được UNESCO công nhận: phố cổ Hội An, thánh địa Mỹ Sơn và cố đô Huế. Kiến trúc của Furama được
+                    pha trộn thiết kế truyền thống của Việt Nam và kiến trúc thời Pháp thuộc, được bố trí hài hòa với
+                    198 phòng, mỗi dãy phòng là một thiên đường của sự sang trọng và khéo léo, từ những tông màu trang
+                    trí ấm áp và phòng tắm rộng bằng đá cẩm thạch với quạt trần và sàn gỗ đánh bóng.
+
+                    Furama được biết đến là nơi duy nhất cung cấp dịch vụ lặn biển tại Đà Nẵng, khu nghỉ dưỡng sẽ mang
+                    đến cho du khách thích khám phá vẻ đẹp của Đại Dương bằng việc lặn ở một trong các bãi biển sang
+                    trọng nhất thế giới, ngoài ra còn có các môn thể thao dưới nước khác như chèo thuyền, lướt sóng,
+                    trượt nước, mô tô nước và thuyền chuối. Một bể bơi nước ngọt khổng lồ được thiết kế ngay trung tâm
+                    của khu nghỉ dưỡng, biến khu nghỉ dưỡng nó trở thành một khu hoàn toàn tách biệt với thế giới bên
+                    ngoài, mang đến sự thư giãn trong bầu không khí thật dịu mát. Bên cạnh đó, dịch vụ spa của khu nghỉ
+                    dưỡng là nơi lý tưởng để cung cấp những phương pháp chăm sóc tốt nhất cho cơ thể và sắc đẹp của du
+                    khách hàng.
+
+                    Điểm nhấn của Café Indochine chính là sự đa dạng của các món ăn châu Á và sự độc đáo của các món ăn
+                    trên khắp thế giới, được trình bày vô cùng hấp dẫn bên trong thực đơn, nhà hàng Don Cipriani’s
+                    Italia với một sự lựa chọn khó bỏ qua của thực khách khi đến với các món ăn đậm nét truyền thống của
+                    Ý, nơi đây các món ăn
+
+                    Lluôn được chuẩn bị kỹ lưỡng cho thực khách và phong cách phục vụ hết sức chu đáo, cùng với đó….là
+                    thức uống được pha 1 cách công phu. Với không gian mở của quầy Bar và khu nhà hàng nằm cạnh hồ bơi
+                    đã tạo nên 1 trải nghiệm không nơi đâu có được. Nơi đây du khách sẽ có cảm nhận được sự ấm cúm của
+                    bầu không khí khi ngồi bên “ốc đảo xanh” đã được thiết kế để du khách có thể nhận ra sư lịch lãm,
+                    tiện nghi của khu nghỉ dưỡng khi thưởng thức các món ăn tại đây.
+
+                    Chính sách
+
+                    Trẻ em dưới 12 tuổi sẽ thu phí bữa sáng là 29 USD.
+
+                    Trẻ em và giường phụ
+
+                    Em bé 0-3 tuổi: Ở miễn phí nếu sử dụng giường sẵn có. Chú ý, nếu bạn cần cũi thì có thể phải trả
+                    thêm phí.
+
+                    Trẻ em 4-11 tuổi: Ở miễn phí nếu sử dụng giường sẵn có.
+
+                    Khách trên 11 tuổi được coi là người lớn. Giường phụ tùy thuộc vào loại phòng bạn chọn, xin vui lòng
+                    kiểm tra thông tin phòng để biết thêm chi tiết.
+
+                    Khi đặt trên 5 phòng, chính sách và điều khoản bổ sung có thể được áp dụng.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12" style="height: 100px;background-color: black;font-size: 50px;text-align: center">
+        <span>Facebook |</span>
+        <span style="margin-left: 20px">Zalo |</span>
+        <span style="margin-left: 20px">Google |</span>
+        <h5>Hà Nội ngày 02-09-2021</h5>
+    </div>
+</div>
+</body>
+</html>
